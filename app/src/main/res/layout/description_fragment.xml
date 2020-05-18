@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:id="@+id/iv_twitter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/ic_twitter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/iv_facebook"
+                app:layout_constraintTop_toBottomOf="@+id/tv_facebook"
+                app:layout_constraintVertical_bias="0.0"
+                tools:src="@drawable/ic_twitter" />
+
+            <ImageView
+                android:id="@+id/iv_facebook"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/ic_facebook"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+                app:layout_constraintVertical_bias="0.0"
+                tools:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:id="@+id/iv_web"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/ic_web"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/iv_youtube"
+                app:layout_constraintTop_toBottomOf="@+id/tv_youtube"
+                tools:src="@drawable/ic_web" />
+
+            <ImageView
+                android:id="@+id/iv_youtube"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/ic_youtube"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/iv_twitter"
+                app:layout_constraintTop_toBottomOf="@+id/tv_twitter"
+                app:layout_constraintVertical_bias="0.0"
+                tools:src="@drawable/ic_youtube" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="facebook"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_facebook"
+                app:layout_constraintStart_toEndOf="@+id/iv_facebook"
+                app:layout_constraintTop_toTopOf="@+id/iv_facebook" />
+
+            <TextView
+                android:id="@+id/tv_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="twitter"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_twitter"
+                app:layout_constraintStart_toEndOf="@+id/iv_twitter"
+                app:layout_constraintTop_toTopOf="@+id/iv_twitter" />
+
+            <TextView
+                android:id="@+id/tv_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="youtube"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_youtube"
+                app:layout_constraintStart_toEndOf="@+id/iv_youtube"
+                app:layout_constraintTop_toTopOf="@+id/iv_youtube" />
+
+            <TextView
+                android:id="@+id/tv_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="www.example.org"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_web"
+                app:layout_constraintStart_toEndOf="@+id/iv_web"
+                app:layout_constraintTop_toTopOf="@+id/iv_web" />
+
+            <include
+                android:id="@+id/content_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                layout="@layout/layout_empty"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/content_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_loading"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardMaxElevation="1dp"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:maxLines="1"
+                android:text="HOME"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/materialIndigo"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_logo_home"
+                app:layout_constraintEnd_toStartOf="@+id/iv_logo_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo_home" />
+
+            <TextView
+                android:id="@+id/tv_away"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="1"
+                android:text="AWAY"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/materialRed"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_logo_away"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_logo_away"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo_away" />
+
+            <TextView
+                android:id="@+id/tv_vs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_logo_away"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo_away" />
+
+            <TextView
+                android:id="@+id/tv_home_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="99"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/materialIndigo"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_logo_home"
+                app:layout_constraintEnd_toStartOf="@+id/tv_vs"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo_home" />
+
+            <TextView
+                android:id="@+id/tv_away_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="99"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/materialRed"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_logo_away"
+                app:layout_constraintStart_toEndOf="@+id/tv_vs"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo_away" />
+
+            <ImageView
+                android:id="@+id/iv_logo_home"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_home_score"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/iv_logo_away"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_away_score"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Scheduled: 2020-02-20"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vs" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
